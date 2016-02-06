@@ -24,10 +24,5 @@
 (add-to-list 'auto-mode-alist '("\\.lhs$" . literate-haskell-mode))
 (add-to-list 'auto-mode-alist '("\\.cabal\\'" . haskell-cabal-mode))
 
-;; zencoding-mode
-(require 'zencoding-mode)
-(add-hook 'sgml-mode-hook 'zencoding-mode)
-(define-key zencoding-mode-keymap (kbd "C-i") 'zencoding-expand-line)
-
 ;; multi-term
 (require 'multi-term)
