@@ -1,3 +1,7 @@
+;; Cask設定
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
 ;; バックアップファイルを作成しない
 (setq make-backup-files nil)
 
