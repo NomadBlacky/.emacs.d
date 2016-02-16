@@ -18,18 +18,13 @@
              (normal-top-level-add-subdirs-to-load-path))))))
 
 ;;; ディレクトリをサブディレクトリごとload-pathに追加
-(add-to-load-path "elisp")
+;;(add-to-load-path "elisp")
 
-;; Haskell-Mode
-(require 'haskell-mode)
-(require 'haskell-cabal)
+;; yas
+(yas-global-mode 1)
 
-(add-to-list 'auto-mode-alist '("\\.hs$" . haskell-mode))
-(add-to-list 'auto-mode-alist '("\\.lhs$" . literate-haskell-mode))
-(add-to-list 'auto-mode-alist '("\\.cabal\\'" . haskell-cabal-mode))
-
-;; multi-term
-(require 'multi-term)
+;; auto-complete
+(ac-config-default)
 
 ;; emmet-mode
 (require 'emmet-mode)

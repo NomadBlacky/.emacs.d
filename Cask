@@ -1,6 +1,10 @@
 (source gnu)
 (source melpa)
 
+
+;; ------------------------------------------------------------
+;; default packages
+;; ------------------------------------------------------------
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "dash")
@@ -24,3 +28,13 @@
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yasnippet")
+;; ------------------------------------------------------------
+
+;; ------------------------------------------------------------
+;; my packages
+;; ------------------------------------------------------------
+(depends-on "auto-complete")
+(depends-on "markdown-mode")
+(depends-on "haskell-mode")
+(depends-on "multi-term")
+(depends-on "emmet-mode")
