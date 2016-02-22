@@ -43,6 +43,12 @@
 (setq linum-format "%3d|")
 (global-linum-mode t)
 
+;; auto-insert-mode
+(auto-insert-mode 1)
+(add-to-list 'auto-insert-alist
+	     '("\\.rb" . "ruby.rb"))
+(setq auto-insert-directory "~/.emacs.d/auto-insert-templates/")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; キーバインド設定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
