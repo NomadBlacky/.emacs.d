@@ -20,6 +20,10 @@
 ;;; ディレクトリをサブディレクトリごとload-pathに追加
 ;;(add-to-load-path "elisp")
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; モード設定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; yas
 (yas-global-mode 1)
 
@@ -34,3 +38,23 @@
 (eval-after-load "emmet-mode"
   '(define-key emmet-mode-keymap (kbd "C-j") nil)) ;; C-j は newline のままにしておく
 (define-key emmet-mode-keymap (kbd "C-i") 'emmet-expand-line) ;; C-i で展開
+
+;; linum-mode
+(setq linum-format "%3d|")
+(global-linum-mode t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; キーバインド設定
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; 指定行にジャンプ
+(bind-key "C-c l" 'goto-line)
+
+;; linum-mode 切り替え
+(bind-key "<f11>" 'linum-mode)
+
+;; multi-term 起動
+(bind-key "C-c t" 'multi-term)
+
+;; サスペンド
+(bind-key "<f12>" 'suspend-emacs)
