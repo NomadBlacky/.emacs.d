@@ -49,6 +49,18 @@
 	     '("\\.rb" . "ruby.rb"))
 (setq auto-insert-directory "~/.emacs.d/auto-insert-templates/")
 
+:;
+;; ruby ;;
+;;
+
+;; robe
+(add-hook 'ruby-mode-hook 'robe-mode)
+
+;; ruby-block
+(require 'ruby-block)
+(ruby-block-mode t)
+(setq ruby-block-highlight-toggle t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; キーバインド設定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
