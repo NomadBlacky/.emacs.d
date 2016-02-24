@@ -38,6 +38,7 @@
 (depends-on "haskell-mode")
 (depends-on "multi-term")
 (depends-on "emmet-mode")
+(depends-on "yaml-mode")
 
 ;; ruby
 (depends-on "enh-ruby-mode")
