@@ -76,3 +76,13 @@
 
 ;; サスペンド
 (bind-key "<f12>" 'suspend-emacs)
+
+;; C-z でバッファ切り替え
+(bind-key "C-z" 'next-buffer)
+(bind-key "M-z" 'previous-buffer)
+
+;; C-o でウィンドウ切り替え
+(bind-key "C-o" 'other-window)
+ 
+;; C-M-Enter でシェルコマンド
+(bind-key "<C-M-return>" 'shell-command)
