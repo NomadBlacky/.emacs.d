@@ -33,3 +33,6 @@ tramp
 
 # server auth directory
 /server/
+
+# ac-comphist.dat
+/ac-comphist.dat
