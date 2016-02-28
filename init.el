@@ -49,7 +49,10 @@
 	     '("\\.rb" . "ruby.rb"))
 (setq auto-insert-directory "~/.emacs.d/auto-insert-templates/")
 
-:;
+;; electric-pair-mode
+(electric-pair-mode t)
+
+;;
 ;; ruby ;;
 ;;
 
@@ -69,7 +72,7 @@
 (bind-key "C-c l" 'goto-line)
 
 ;; linum-mode 切り替え
-(bind-key "<f11>" 'linum-mode)
+(bind-key "<f9>" 'linum-mode)
 
 ;; multi-term 起動
 (bind-key "C-c t" 'multi-term)
