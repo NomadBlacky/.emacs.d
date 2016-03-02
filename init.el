@@ -52,6 +52,9 @@
 ;; electric-pair-mode
 (electric-pair-mode t)
 
+;; global-auto-revert-mode
+(global-auto-revert-mode t) ;; 自動再読み込み
+
 ;;
 ;; ruby ;;
 ;;
@@ -89,3 +92,9 @@
  
 ;; C-M-Enter でシェルコマンド
 (bind-key "<C-M-return>" 'shell-command)
+
+;; F5 でバッファ更新
+(bind-key "<f5>" 'revert-buffer)
+
+;; インデント
+(define-key global-map (kbd "RET") 'newline-and-indent)
