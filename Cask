@@ -39,6 +39,7 @@
 (depends-on "multi-term")
 (depends-on "emmet-mode")
 (depends-on "yaml-mode")
+(depends-on "recentf-ext")
 
 ;; ruby
 (depends-on "enh-ruby-mode")

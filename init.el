@@ -20,6 +20,10 @@
 ;;; ディレクトリをサブディレクトリごとload-pathに追加
 ;;(add-to-load-path "elisp")
 
+;; recentf-ext
+(require 'recentf-ext)
+(setq recentf-max-saved-items 100)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; モード設定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -98,3 +102,6 @@
 
 ;; インデント
 (define-key global-map (kbd "RET") 'newline-and-indent)
+
+;; C-c f で最近開いたファイルを開く
+(bind-key "C-c f" 'recentf-open-files)
