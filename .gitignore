@@ -39,3 +39,7 @@ tramp
 
 # recentf-ext
 /recentf
+
+# backup
+/backup/*
+!/backup/.gitkeep
