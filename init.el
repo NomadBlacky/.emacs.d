@@ -2,8 +2,15 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
-;; バックアップファイルを作成しない
-(setq make-backup-files nil)
+;;
+;; backup の保存先を変更
+;;
+(setq backup-directory-alist
+      (cons (cons ".*" (expand-file-name "~/.emacs.d/backup"))
+	    backup-directory-alist))
+
+(setq auto-save-file-name-transforms
+        `((".*", (expand-file-name "~/.emacs.d/backup/") t)))
 
 ;; スタートアップ画面を表示しない
 (setq inhibit-startup-message t)
