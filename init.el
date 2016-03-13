@@ -105,3 +105,6 @@
 
 ;; C-c f で最近開いたファイルを開く
 (bind-key "C-c f" 'recentf-open-files)
+
+;; C-c C-c でコメントアウト
+(bind-key "C-c C-c" 'comment-or-uncomment-region)
