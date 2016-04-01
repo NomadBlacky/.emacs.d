@@ -117,4 +117,4 @@
 (bind-key "C-c C-c" 'comment-or-uncomment-region)
 
 ;; C-c C-b バッファメニュー
-(bind-key "C-c C-b" 'buffer-menu)
+(bind-key "C-c b" 'buffer-menu)
