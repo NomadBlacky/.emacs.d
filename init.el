@@ -115,3 +115,6 @@
 
 ;; C-c C-c でコメントアウト
 (bind-key "C-c C-c" 'comment-or-uncomment-region)
+
+;; C-c C-b バッファメニュー
+(bind-key "C-c C-b" 'buffer-menu)
