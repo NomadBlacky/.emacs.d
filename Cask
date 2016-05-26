@@ -47,3 +47,6 @@
 (depends-on "ruby-end")
 (depends-on "robe")
 (depends-on "ruby-block")
+
+;; groovy
+(depends-on "groovy-mode")
