@@ -123,3 +123,6 @@
 
 ;; C-c C-b バッファメニュー
 (bind-key "C-c b" 'buffer-menu)
+
+;; C-c r で矩形選択モード
+(bind-key "C-c r" 'rectangle-mark-mode)
