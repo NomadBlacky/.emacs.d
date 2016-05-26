@@ -50,3 +50,6 @@
 
 ;; groovy
 (depends-on "groovy-mode")
+
+;; web
+(depends-on "web-mode")
