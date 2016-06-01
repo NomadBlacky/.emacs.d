@@ -1,3 +1,4 @@
+
 ;; Cask設定
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
@@ -82,6 +83,9 @@
 (defun insert-date-time ()
   (interactive)
   (insert (format-time-string "%Y/%m/%d %H:%M:%S")))
+
+;; flycheck
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; キーバインド設定

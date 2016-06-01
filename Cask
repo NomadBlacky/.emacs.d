@@ -40,6 +40,7 @@
 (depends-on "emmet-mode")
 (depends-on "yaml-mode")
 (depends-on "recentf-ext")
+(depends-on "flycheck")
 
 ;; ruby
 (depends-on "enh-ruby-mode")
