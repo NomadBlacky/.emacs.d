@@ -46,6 +46,7 @@
 (require 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; マークアップ言語全部で使う
 (add-hook 'css-mode-hook  'emmet-mode) ;; CSSにも使う
+(add-hook 'web-mode-hook  'emmet-mode)
 (add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2))) ;; indent はスペース2個
 (eval-after-load "emmet-mode"
   '(define-key emmet-mode-keymap (kbd "C-j") nil)) ;; C-j は newline のままにしておく
@@ -67,10 +68,6 @@
 ;; global-auto-revert-mode (Cygwin環境だとうまくいかない)
 ;;(global-auto-revert-mode t) ;; 自動再読み込み
 
-;;
-;; ruby ;;
-;;
-
 ;; robe
 (add-hook 'ruby-mode-hook 'robe-mode)
 
@@ -86,6 +83,12 @@
 
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; web-mode
+(defun web-mode-hook ()
+  (setq web-mode-markup-indent-offset 4)
+  (add-hook 'web-mode-hook 'web-mode-hook))
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; キーバインド設定
@@ -130,6 +133,9 @@
 
 ;; C-c r で矩形選択モード
 (bind-key "C-c r" 'rectangle-mark-mode)
+
+;; C-c C-f で別ウィンドウでファイルを開く
+(bind-key "C-c C-f" 'find-file-other-window)
 
 ;; custom-set-variables
 (custom-set-variables
