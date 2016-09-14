@@ -33,14 +33,15 @@
 ;;-------------------------------------------------------------
 ;; my packages
 ;;-------------------------------------------------------------
-(depends-on "auto-complete")
-(depends-on "markdown-mode")
-(depends-on "haskell-mode")
+
+;; utility
 (depends-on "multi-term")
-(depends-on "emmet-mode")
-(depends-on "yaml-mode")
 (depends-on "recentf-ext")
 (depends-on "flycheck")
+(depends-on "magit")
+
+;; editing
+(depends-on "auto-complete")
 
 ;; ruby
 (depends-on "enh-ruby-mode")
@@ -52,5 +53,15 @@
 ;; groovy
 (depends-on "groovy-mode")
 
+;; haskell
+(depends-on "haskell-mode")
+
+;; markdown
+(depends-on "markdown-mode")
+
+;; yaml
+(depends-on "yaml-mode")
+
 ;; web
 (depends-on "web-mode")
+(depends-on "emmet-mode")
