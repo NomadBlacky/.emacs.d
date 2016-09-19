@@ -53,6 +53,10 @@
 ;; groovy
 (depends-on "groovy-mode")
 
+;; scala
+(depends-on "scala-mode")
+(depends-on "ensime")
+
 ;; haskell
 (depends-on "haskell-mode")
 

@@ -88,6 +88,12 @@
   (add-hook 'web-mode-hook 'web-mode-hook))
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 
+;; scala-mode
+(require 'scala-mode)
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(setq ensime-completion-style 'auto-complete)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; キーバインド設定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
