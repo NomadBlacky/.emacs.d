@@ -69,3 +69,6 @@
 ;; web
 (depends-on "web-mode")
 (depends-on "emmet-mode")
+
+;; fish shell
+(depends-on "fish-mode")
