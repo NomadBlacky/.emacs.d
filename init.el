@@ -1,4 +1,10 @@
 
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 ;; Cask設定
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
@@ -91,8 +97,40 @@
 ;; scala-mode
 (require 'scala-mode)
 (require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+(add-hook 'scala-mode-hook 'ensime)
 (setq ensime-completion-style 'auto-complete)
+
+(defun scala/completing-dot-company ()
+  (cond (company-backend
+	 (company-complete-selection)
+	 (scala/completing-dot))
+	(t
+	 (insert ".")
+	 (company-complete))))
+
+(defun scala/completing-dot-ac ()
+  (insert ".")
+  (ac-trigger-key-command t))
+
+;; Interactive commands
+
+(defun scala/completing-dot ()
+  "Insert a period and show company completions."
+  (interactive "*")
+  (eval-and-compile (require 'ensime))
+  (eval-and-compile (require 's))
+  (when (s-matches? (rx (+ (not space)))
+		    (buffer-substring (line-beginning-position) (point)))
+    (delete-horizontal-space t))
+  (cond ((not (and (ensime-connected-p) ensime-completion-style))
+	 (insert "."))
+	((eq ensime-completion-style 'company)
+	 (scala/completing-dot-company))
+	((eq ensime-completion-style 'auto-complete)
+	 (scala/completing-dot-ac))))
+
+;; magit
+(require 'magit)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; キーバインド設定
@@ -119,6 +157,9 @@
  
 ;; C-M-Enter でシェルコマンド
 (bind-key "<C-M-return>" 'shell-command)
+
+;; M-Enter でシェルコマンド
+(bind-key "M-RET" 'shell-command)
 
 ;; F5 でバッファ更新
 (bind-key "<f5>" 'revert-buffer)
@@ -155,3 +196,7 @@
  ;; If there is more than one, they won't work right.
  )
 (put 'upcase-region 'disabled nil)
+
+;; autocomplate
+(bind-key "C-j" 'auto-complete)
+
