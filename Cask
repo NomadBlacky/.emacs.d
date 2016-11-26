@@ -72,3 +72,6 @@
 
 ;; fish shell
 (depends-on "fish-mode")
+
+;; mozc
+(depends-on "mozc")
