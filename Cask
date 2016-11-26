@@ -75,3 +75,6 @@
 
 ;; mozc
 (depends-on "mozc")
+
+;; Twitter
+(depends-on "twittering-mode")
