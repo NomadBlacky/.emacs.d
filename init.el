@@ -151,6 +151,7 @@
 		    ("R" . twittering-replies-timeline)
 		    ("U" . twittering-user-timeline)
 		    ("W" . twittering-update-status-interactive)))))
+(setq twittering-use-master-password t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; キーバインド設定
