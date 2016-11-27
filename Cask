@@ -34,6 +34,12 @@
 ;; my packages
 ;;-------------------------------------------------------------
 
+;; library
+(depends-on "dash")
+(depends-on "s")
+(depends-on "f")
+(depends-on "ht")
+
 ;; utility
 (depends-on "multi-term")
 (depends-on "recentf-ext")
