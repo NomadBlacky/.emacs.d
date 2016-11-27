@@ -152,6 +152,20 @@
 		    ("U" . twittering-user-timeline)
 		    ("W" . twittering-update-status-interactive)))))
 (setq twittering-use-master-password t)
+(setq twittering-timer-interval 300)
+(setq twittering-username "blac_k_ey")
+(add-hook 'twittering-new-tweets-hook 'twittering-mention-notification-func)
+(defun twittering-mention-notification-func ()
+  "Send notification with 'notify-send'."
+  (when (and twittering-username
+	     (boundp 'twittering-new-tweets-statuses))
+    (dolist (tweet twittering-new-tweets-statuses)
+      (when (string-match-p
+	     (format "@%s" twittering-username)
+	     (alist-get 'text tweet))
+	(start-process "twittering-notify" nil "notify-send"
+		       "New Mention"
+		       (alist-get 'text tweet))))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; キーバインド設定
