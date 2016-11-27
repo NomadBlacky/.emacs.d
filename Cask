@@ -48,6 +48,7 @@
 
 ;; editing
 (depends-on "auto-complete")
+(depends-on "expand-region")
 
 ;; ruby
 (depends-on "enh-ruby-mode")

@@ -203,6 +203,12 @@
 ;; C-c C-f で別ウィンドウでファイルを開く
 (bind-key "C-c C-f" 'find-file-other-window)
 
+;; autocomplate
+(bind-key "C-j" 'auto-complete)
+
+;; expand-region
+(bind-key "C-@" 'er/expand-region)
+
 ;; custom-set-variables
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -217,7 +223,4 @@
  ;; If there is more than one, they won't work right.
  )
 (put 'upcase-region 'disabled nil)
-
-;; autocomplate
-(bind-key "C-j" 'auto-complete)
 
