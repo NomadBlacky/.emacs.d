@@ -40,11 +40,17 @@
 (depends-on "f")
 (depends-on "ht")
 
+;; lisp
+(depends-on "lispxmp")
+(depends-on "paredit")
+(depends-on "auto-async-byte-compile")
+
 ;; utility
 (depends-on "multi-term")
 (depends-on "recentf-ext")
 (depends-on "flycheck")
 (depends-on "magit")
+(depends-on "open-junk-file")
 
 ;; editing
 (depends-on "auto-complete")
