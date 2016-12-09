@@ -51,6 +51,7 @@
 (depends-on "flycheck")
 (depends-on "magit")
 (depends-on "open-junk-file")
+(depends-on "epc")
 
 ;; editing
 (depends-on "auto-complete")
@@ -62,6 +63,12 @@
 (depends-on "ruby-end")
 (depends-on "robe")
 (depends-on "ruby-block")
+
+;; python
+(depends-on "virtualenv")
+(depends-on "jedi")
+(depends-on "py-autopep8")
+(depends-on "flycheck-pyflakes")
 
 ;; groovy
 (depends-on "groovy-mode")
