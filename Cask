@@ -82,6 +82,7 @@
 
 ;; markdown
 (depends-on "markdown-mode")
+(depends-on "markdown-preview-mode")
 
 ;; yaml
 (depends-on "yaml-mode")
