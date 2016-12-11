@@ -52,6 +52,8 @@
 (depends-on "magit")
 (depends-on "open-junk-file")
 (depends-on "epc")
+(depends-on "google-translate")
+(depends-on "popwin")
 
 ;; editing
 (depends-on "auto-complete")

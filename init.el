@@ -174,6 +174,18 @@
 ;; markdown-preview-mode
 (setq markdown-command "marked")
 
+;; google-translate
+(bind-key "C-c C-g" 'google-translate-at-point)
+(custom-set-variables
+ '(google-translate-default-source-language "en")
+ '(google-translate-default-target-language "ja"))
+
+;; popwin
+(require 'popwin)
+(setq display-buffer-function 'popwin:display-buffer)
+(setq popwin:popup-window-position 'bottom)
+(push '("Google Translate") popwin:special-display-config)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; キーバインド設定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
