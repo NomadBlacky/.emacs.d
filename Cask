@@ -45,6 +45,9 @@
 (depends-on "paredit")
 (depends-on "auto-async-byte-compile")
 
+;; theme
+(depends-on "color-theme")
+
 ;; utility
 (depends-on "multi-term")
 (depends-on "recentf-ext")
