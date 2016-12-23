@@ -34,6 +34,12 @@
 ;;; ディレクトリをサブディレクトリごとload-pathに追加
 ;;(add-to-load-path "elisp")
 
+(defun open-init-el ()
+  "Visiting '~/.emacs.d/init.el'."
+  (interactive)
+  (switch-to-buffer (find-file-noselect "~/.emacs.d/init.el")))
+(bind-key "C-c C-i" 'open-init-el)
+
 ;; recentf-ext
 (require 'recentf-ext)
 (setq recentf-max-saved-items 100)
