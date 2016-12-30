@@ -146,6 +146,33 @@
 
 ;; magit
 (require 'magit)
+;; foreground colors
+(set-face-foreground 'magit-diff-context "unspecified")
+(set-face-foreground 'magit-diff-context-highlight "unspecified")
+(set-face-foreground 'magit-diff-added "#00ff00")
+(set-face-foreground 'magit-diff-added-highlight "#00ff00")
+(set-face-foreground 'magit-diff-removed "#ff0000")
+(set-face-foreground 'magit-diff-removed-highlight "#ff0000")
+(set-face-foreground 'magit-diff-hunk-heading "#eeeeaa")
+(set-face-foreground 'magit-diff-hunk-heading-highlight "unspecified")
+(set-face-foreground 'magit-diff-added "#00ff00")
+(set-face-foreground 'magit-diff-added "#00ff00")
+(set-face-foreground 'magit-diff-removed "#ff0000")
+(set-face-foreground 'magit-diff-removed-highlight "#ff0000")
+;; background colors
+(set-face-background 'magit-diff-base "unspecified")
+(set-face-background 'magit-diff-base-highlight "#333333")
+(set-face-background 'magit-diff-context "unspecified")
+(set-face-background 'magit-diff-context-highlight "#333333")
+(set-face-background 'magit-diff-file-heading "#555533")
+(set-face-background 'magit-diff-file-heading-highlight "#555533")
+(set-face-background 'magit-diff-hunk-heading "#555533")
+(set-face-background 'magit-diff-hunk-heading-highlight "#555533")
+(set-face-background 'magit-diff-added "unspecified")
+(set-face-background 'magit-diff-added-highlight "#333333")
+(set-face-background 'magit-diff-removed "unspecified")
+(set-face-background 'magit-diff-removed-highlight "#333333")
+
 
 ;; mozc
 (require 'mozc)
