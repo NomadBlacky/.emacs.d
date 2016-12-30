@@ -50,6 +50,9 @@
 
 ;; helm
 (bind-key "M-x" 'helm-M-x)
+(bind-key "M-j" 'helm-mini)
+(bind-key "C-x C-f" 'helm-find-files)
+(bind-key "C-x b" 'helm-buffers-list)
 
 ;; yas
 (yas-global-mode 1)
