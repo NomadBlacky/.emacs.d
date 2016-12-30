@@ -198,6 +198,10 @@
 (setq popwin:popup-window-position 'bottom)
 (push '("Google Translate") popwin:special-display-config)
 
+;; edit-server
+(edit-server-start)
+(setq edit-server-new-frame nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; キーバインド設定
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

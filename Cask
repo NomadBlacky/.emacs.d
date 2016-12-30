@@ -58,6 +58,7 @@
 (depends-on "google-translate")
 (depends-on "popwin")
 (depends-on "helm")
+(depends-on "edit-server")
 
 ;; editing
 (depends-on "auto-complete")
