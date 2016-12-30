@@ -43,3 +43,6 @@ tramp
 # backup
 /backup/*
 !/backup/.gitkeep
+
+# cookie
+/url
