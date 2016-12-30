@@ -57,6 +57,7 @@
 (depends-on "epc")
 (depends-on "google-translate")
 (depends-on "popwin")
+(depends-on "helm")
 
 ;; editing
 (depends-on "auto-complete")
