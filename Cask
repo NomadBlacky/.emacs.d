@@ -59,6 +59,8 @@
 (depends-on "popwin")
 (depends-on "helm")
 (depends-on "edit-server")
+(depends-on "projectile")
+(depends-on "helm-projectile")
 
 ;; editing
 (depends-on "auto-complete")
