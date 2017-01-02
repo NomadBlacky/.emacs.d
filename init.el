@@ -53,6 +53,7 @@
 (bind-key "M-j" 'helm-mini)
 (bind-key "C-x C-f" 'helm-find-files)
 (bind-key "C-x b" 'helm-buffers-list)
+(bind-key "C-c f" 'helm-recentf)
 
 ;; yas
 (yas-global-mode 1)
@@ -270,9 +271,6 @@
 
 ;; インデント
 (define-key global-map (kbd "RET") 'newline-and-indent)
-
-;; C-c f で最近開いたファイルを開く
-(bind-key "C-c f" 'recentf-open-files)
 
 ;; C-c C-c でコメントアウト
 (bind-key "C-c C-c" 'comment-or-uncomment-region)
