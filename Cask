@@ -61,6 +61,7 @@
 (depends-on "edit-server")
 (depends-on "projectile")
 (depends-on "helm-projectile")
+(depends-on "ctags")
 
 ;; editing
 (depends-on "auto-complete")
