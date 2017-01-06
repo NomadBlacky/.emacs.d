@@ -44,9 +44,9 @@
 (require 'recentf-ext)
 (setq recentf-max-saved-items 100)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; モード設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Package Specific Settings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; helm
 (bind-key "M-x" 'helm-M-x)
@@ -243,59 +243,49 @@
 (bind-key "<f7>" 'ctags-create-or-update-tags-table)
 (bind-key "M-." 'ctags-search)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; キーバインド設定
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Key Bindings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; 指定行にジャンプ
+;;
+;; Editing
+;;
+
+(bind-key "C-h" 'backward-delete-char-untabify)
+(bind-key "M-h" 'backward-kill-word)
 (bind-key "C-c l" 'goto-line)
-
-;; linum-mode 切り替え
-(bind-key "<f9>" 'linum-mode)
-
-;; multi-term 起動
-(bind-key "C-c t" 'multi-term)
-
-;; サスペンド
-(bind-key "<f12>" 'suspend-emacs)
-
-;; C-z でバッファ切り替え
-(bind-key "C-z" 'next-buffer)
-(bind-key "M-z" 'previous-buffer)
-
-;; C-o でウィンドウ切り替え
-(bind-key "C-o" 'other-window)
- 
-;; C-M-Enter でシェルコマンド
-(bind-key "<C-M-return>" 'shell-command)
-
-;; M-Enter でシェルコマンド
-(bind-key "M-RET" 'shell-command)
-
-;; F5 でバッファ更新
-(bind-key "<f5>" 'revert-buffer)
-
-;; インデント
-(define-key global-map (kbd "RET") 'newline-and-indent)
-
-;; C-c C-c でコメントアウト
+(bind-key "RET" 'newline-and-indentf)
 (bind-key "C-c C-c" 'comment-or-uncomment-region)
-
-;; C-c C-b バッファメニュー
-(bind-key "C-c b" 'buffer-menu)
-
-;; C-c r で矩形選択モード
 (bind-key "C-c r" 'rectangle-mark-mode)
-
-;; C-c C-f で別ウィンドウでファイルを開く
-(bind-key "C-c C-f" 'find-file-other-window)
-
-;; autocomplate
-(bind-key "C-j" 'auto-complete)
-
-;; expand-region
 (bind-key "C-@" 'er/expand-region)
 
+;;
+;; Buffers
+;;
+
+(bind-key "C-z" 'next-buffer)
+(bind-key "M-z" 'previous-buffer)
+(bind-key "<f5>" 'revert-buffer)
+(bind-key "C-c b" 'buffer-menu)
+
+;;
+;; Windows
+;;
+(bind-key "C-o" 'other-window)
+(bind-key "C-c C-f" 'find-file-other-window)
+
+;;
+;; Modes
+;;
+(bind-key "<f9>" 'linum-mode)
+(bind-key "C-c t" 'multi-term)
+
+;;
+;; Others
+;;
+(bind-key "<f12>" 'suspend-emacs)
+(bind-key "<C-M-return>" 'shell-command)
+(bind-key "M-RET" 'shell-command)
 
 ;; for GUI
 (if window-system
