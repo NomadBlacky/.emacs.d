@@ -60,6 +60,7 @@
 
 ;; auto-complete
 (ac-config-default)
+(bind-key "C-j" 'auto-complete)
 (bind-key "C-n" 'ac-next ac-complete-mode-map)
 (bind-key "C-p" 'ac-previous ac-complete-mode-map)
 (bind-key "C-f" 'ac-complete ac-complete-mode-map)
