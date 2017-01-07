@@ -1,3 +1,6 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Packages
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -5,24 +8,25 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;; Cask設定
+;; Load the packages of downloaded with Cask.
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
-;;
-;; backup の保存先を変更
-;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; General
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Change the directory that save the backup files,
 (setq backup-directory-alist
       (cons (cons ".*" (expand-file-name "~/.emacs.d/backup"))
 	    backup-directory-alist))
-
 (setq auto-save-file-name-transforms
         `((".*", (expand-file-name "~/.emacs.d/backup/") t)))
 
-;; スタートアップ画面を表示しない
+;; Disable the startup message.
 (setq inhibit-startup-message t)
 
-;;; load-pathを追加する関数を定義
+;; Define a function that add the directories to load-path.
 (defun add-to-load-path (&rest paths)
   (let (path)
     (dolist (path paths paths)
@@ -31,18 +35,24 @@
          (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
              (normal-top-level-add-subdirs-to-load-path))))))
 
-;;; ディレクトリをサブディレクトリごとload-pathに追加
-;;(add-to-load-path "elisp")
-
+;; Open the init.el with 'C-c C-i'
 (defun open-init-el ()
   "Visiting '~/.emacs.d/init.el'."
   (interactive)
   (switch-to-buffer (find-file-noselect "~/.emacs.d/init.el")))
 (bind-key "C-c C-i" 'open-init-el)
 
+;; Insert current date and time.
+(defun insert-date-time ()
+  (interactive)
+  (insert (format-time-string "%Y/%m/%d %H:%M:%S")))
+
 ;; recentf-ext
 (require 'recentf-ext)
 (setq recentf-max-saved-items 100)
+
+;; dired
+(setq dired-dwim-target t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package Specific Settings
@@ -67,11 +77,11 @@
 
 ;; emmet-mode
 (require 'emmet-mode)
-(add-hook 'sgml-mode-hook 'emmet-mode) ;; マークアップ言語全部で使う
-(add-hook 'css-mode-hook  'emmet-mode) ;; CSSにも使う
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Use by markup languages.
+(add-hook 'css-mode-hook  'emmet-mode) ;; Use by CSS.
 (add-hook 'web-mode-hook  'emmet-mode)
-(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2))) ;; indent はスペース2個
-(define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line) ;; C-j で展開
+(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2))) ;; The indent is 2 spaces.
+(define-key emmet-mode-keymap (kbd "C-j") 'emmet-expand-line) ;; Expand code with 'C-j'
 
 ;; linum-mode
 (setq linum-format "%3d|")
@@ -97,11 +107,6 @@
 (require 'ruby-block)
 (ruby-block-mode t)
 (setq ruby-block-highlight-toggle t)
-
-;; 時刻を挿入する関数
-(defun insert-date-time ()
-  (interactive)
-  (insert (format-time-string "%Y/%m/%d %H:%M:%S")))
 
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
