@@ -89,6 +89,10 @@
 (setq linum-format "%3d|")
 (global-linum-mode t)
 
+;; hl-line
+(hl-line-mode t)
+(set-face-background 'hl-line "#004400")
+
 ;; auto-insert-mode
 (auto-insert-mode 1)
 (add-to-list 'auto-insert-alist '("\\.rb" . "ruby.rb"))
