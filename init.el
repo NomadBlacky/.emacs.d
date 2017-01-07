@@ -88,6 +88,7 @@
 ;; linum-mode
 (setq linum-format "%3d|")
 (global-linum-mode t)
+(require 'linum-off)
 
 ;; hl-line
 (hl-line-mode t)

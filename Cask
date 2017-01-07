@@ -64,6 +64,7 @@
 (depends-on "ctags")
 (depends-on "dired-toggle")
 (depends-on "dired-details")
+(depends-on "linum-off")
 
 ;; editing
 (depends-on "auto-complete")
