@@ -86,8 +86,8 @@
 ;; electric-pair-mode
 (electric-pair-mode t)
 
-;; global-auto-revert-mode (Cygwin環境だとうまくいかない)
-;;(global-auto-revert-mode t) ;; 自動再読み込み
+;; global-auto-revert-mode
+(global-auto-revert-mode t)
 
 ;; robe
 (add-hook 'ruby-mode-hook 'robe-mode)
