@@ -47,16 +47,18 @@
   (interactive)
   (insert (format-time-string "%Y/%m/%d %H:%M:%S")))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Package Specific Settings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; recentf-ext
 (require 'recentf-ext)
 (setq recentf-max-saved-items 100)
 
 ;; dired
 (setq dired-dwim-target t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Package Specific Settings
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq dired-toggle-window-size 30)
+(bind-key "C-c C-p" 'dired-toggle)
 
 ;; helm
 (bind-key "M-x" 'helm-M-x)

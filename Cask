@@ -62,6 +62,8 @@
 (depends-on "projectile")
 (depends-on "helm-projectile")
 (depends-on "ctags")
+(depends-on "dired-toggle")
+(depends-on "dired-details")
 
 ;; editing
 (depends-on "auto-complete")
