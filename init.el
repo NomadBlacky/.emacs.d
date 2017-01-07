@@ -161,6 +161,7 @@
 
 ;; magit
 (require 'magit)
+(bind-key "M-m" 'magit-status)
 ;; foreground colors
 (set-face-foreground 'magit-diff-context "unspecified")
 (set-face-foreground 'magit-diff-context-highlight "unspecified")
