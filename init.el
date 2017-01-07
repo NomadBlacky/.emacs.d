@@ -256,7 +256,7 @@
 (bind-key "C-h" 'backward-delete-char-untabify)
 (bind-key "M-h" 'backward-kill-word)
 (bind-key "C-c l" 'goto-line)
-(bind-key "RET" 'newline-and-indentf)
+(bind-key "RET" 'newline-and-indent)
 (bind-key "C-c C-c" 'comment-or-uncomment-region)
 (bind-key "C-c r" 'rectangle-mark-mode)
 (bind-key "C-@" 'er/expand-region)
