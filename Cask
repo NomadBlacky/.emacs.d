@@ -65,6 +65,7 @@
 (depends-on "dired-toggle")
 (depends-on "dired-details")
 (depends-on "linum-off")
+(depends-on "undo-tree")
 
 ;; editing
 (depends-on "auto-complete")
