@@ -309,6 +309,8 @@
       (color-theme-ld-dark)
       (set-frame-parameter nil 'alpha 90)
       (bind-key "C-x C-c" 'kill-this-buffer)
+      (bind-key "C-x <f12>" 'save-buffers-kill-terminal)
+      (unbind-key "C-\\") ; Disable the mozc key binding.
       (tool-bar-mode 0)
       (add-to-list 'default-frame-alist '(font . "ricty-10"))
       ))
