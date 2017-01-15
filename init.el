@@ -258,6 +258,9 @@
 (bind-key "<f7>" 'ctags-create-or-update-tags-table)
 (bind-key "M-." 'ctags-search)
 
+;; anzu
+(global-anzu-mode +1)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Bindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

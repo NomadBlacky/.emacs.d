@@ -66,6 +66,7 @@
 (depends-on "dired-details")
 (depends-on "linum-off")
 (depends-on "undo-tree")
+(depends-on "anzu")
 
 ;; editing
 (depends-on "auto-complete")
