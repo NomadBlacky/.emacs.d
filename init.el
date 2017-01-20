@@ -253,10 +253,10 @@
 (helm-projectile-on)
 
 ;; ctags
-(require 'ctags)
-(setq tags-revert-without-query t)
-(bind-key "<f7>" 'ctags-create-or-update-tags-table)
-(bind-key "M-." 'ctags-search)
+;;(require 'ctags)
+;;(setq tags-revert-without-query t)
+;;(bind-key "<f7>" 'ctags-create-or-update-tags-table)
+;;(bind-key "M-." 'ctags-search)
 
 ;; anzu
 (global-anzu-mode +1)
