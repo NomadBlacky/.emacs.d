@@ -47,6 +47,9 @@
   (interactive)
   (insert (format-time-string "%Y/%m/%d %H:%M:%S")))
 
+;; Share clipboard
+(setq x-select-enable-clipboard t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Package Specific Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
