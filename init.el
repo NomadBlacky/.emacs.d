@@ -315,7 +315,7 @@
       (bind-key "C-x <f12>" 'save-buffers-kill-terminal)
       (unbind-key "C-\\") ; Disable the mozc key binding.
       (tool-bar-mode 0)
-      (add-to-list 'default-frame-alist '(font . "ricty-10"))
+      (add-to-list 'default-frame-alist '(font . "Migu 1M-10"))
       ))
 
 ;; custom-set-variables
