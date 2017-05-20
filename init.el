@@ -164,7 +164,9 @@
 
 ;; magit
 (require 'magit)
-(bind-key "M-m" 'magit-status)
+(bind-key "M-m M-s" 'magit-status)
+(bind-key "M-m M-l" 'magit-log-all)
+(bind-key "M-m M-f" 'magit-log-buffer-file)
 ;; foreground colors
 (set-face-foreground 'magit-diff-context "unspecified")
 (set-face-foreground 'magit-diff-context-highlight "unspecified")
