@@ -164,6 +164,7 @@
 
 ;; magit
 (require 'magit)
+(unbind-key "M-m")
 (bind-key "M-m M-s" 'magit-status)
 (bind-key "M-m M-l" 'magit-log-all)
 (bind-key "M-m M-f" 'magit-log-buffer-file)
