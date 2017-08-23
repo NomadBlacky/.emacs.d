@@ -230,6 +230,7 @@
 	(start-process "twittering-notify" nil "notify-send"
 		       "New Mention"
 		       (alist-get 'text tweet))))))
+(bind-key "C-c C-t" 'twittering-update-status-interactive)
 
 ;; python
 (add-hook 'python-mode-hook 'jedi:setup)
