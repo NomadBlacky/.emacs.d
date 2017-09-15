@@ -61,7 +61,7 @@
 (depends-on "edit-server")
 (depends-on "projectile")
 (depends-on "helm-projectile")
-(depends-on "ctags")
+;;(depends-on "ctags")
 (depends-on "dired-toggle")
 (depends-on "dired-details")
 (depends-on "linum-off")
