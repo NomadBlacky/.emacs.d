@@ -114,3 +114,6 @@
 
 ;; Twitter
 (depends-on "twittering-mode")
+
+;; Kotlin
+(depends-on "kotlin-mode")
