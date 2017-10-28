@@ -95,7 +95,7 @@
 
 ;; hl-line
 (hl-line-mode t)
-(set-face-background 'hl-line "#004400")
+(set-face-background 'hl-line "#003300")
 
 ;; auto-insert-mode
 (auto-insert-mode 1)
@@ -332,3 +332,10 @@
       (tool-bar-mode 0)
       (add-to-list 'default-frame-alist '(font . "Migu 1M-10"))
       ))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(helm-selection ((t (:background "dark olive green" :distant-foreground "black"))))
+ '(magit-section-highlight ((t (:background "dim gray")))))
