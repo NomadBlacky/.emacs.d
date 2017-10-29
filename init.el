@@ -65,10 +65,9 @@
 
 ;; helm
 (bind-key "M-x" 'helm-M-x)
-(bind-key "M-j" 'helm-mini)
 (bind-key "C-x C-f" 'helm-find-files)
 (bind-key "C-x b" 'helm-buffers-list)
-(bind-key "C-c f" 'helm-recentf)
+(bind-key "C-x f" 'helm-recentf)
 
 ;; yas
 (yas-global-mode 1)
@@ -317,11 +316,7 @@
 ;;
 ;; Buffers
 ;;
-
-(bind-key "C-z" 'next-buffer)
-(bind-key "M-z" 'previous-buffer)
 (bind-key "<f5>" 'revert-buffer)
-(bind-key "C-c b" 'buffer-menu)
 
 ;;
 ;; Windows
