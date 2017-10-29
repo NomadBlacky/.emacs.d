@@ -95,6 +95,7 @@
 ;; scala
 (depends-on "scala-mode")
 (depends-on "ensime")
+(depends-on "sbt-mode")
 
 ;; haskell
 (depends-on "haskell-mode")
