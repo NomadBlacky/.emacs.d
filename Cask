@@ -67,6 +67,7 @@
 (depends-on "linum-off")
 (depends-on "undo-tree")
 (depends-on "anzu")
+(depends-on "elscreen")
 
 ;; editing
 (depends-on "auto-complete")

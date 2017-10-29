@@ -296,6 +296,14 @@
     ("o"        . 'mc/sort-regions)
     ("O"        . 'mc/reverse-regions)))
 
+;; elscreen
+(setq elscreen-prefix-key (kbd "C-z"))
+(elscreen-start)
+(setq elscreen-tab-display-kill-screen nil)
+(setq elscreen-tab-display-control nil)
+(elscreen-create)
+(global-set-key (kbd "<C-tab>") 'elscreen-next)
+(global-set-key (kbd "<C-S-iso-lefttab>") 'elscreen-previous)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Bindings
