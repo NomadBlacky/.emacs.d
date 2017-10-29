@@ -307,7 +307,7 @@
 (global-anzu-mode +1)
 
 ;; desktop
-(desktop-save-mode t)
+;;(desktop-save-mode t)
 
 ;; multiple-cursors & smartrep
 (require 'multiple-cursors)
