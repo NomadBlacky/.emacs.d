@@ -399,4 +399,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(helm-selection ((t (:background "dark olive green" :distant-foreground "black"))))
- '(magit-section-highlight ((t (:background "dim gray")))))
+ '(magit-section-highlight ((t (:background "dim gray"))))
+ '(minibuffer-prompt ((t (:foreground "cyan")))))
