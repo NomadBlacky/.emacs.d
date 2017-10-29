@@ -71,6 +71,7 @@
 
 ;; editing
 (depends-on "auto-complete")
+(depends-on "company")
 (depends-on "expand-region")
 (depends-on "multiple-cursors")
 (depends-on "smartrep")
