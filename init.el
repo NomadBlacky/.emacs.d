@@ -236,6 +236,7 @@
 (set-language-environment "Japanese")
 (setq default-input-method "japanese-mozc")
 (prefer-coding-system 'utf-8)
+(global-set-key [zenkaku-hankaku] #'toggle-input-method)
 
 ;; twitter
 (add-hook 'twittering-mode-hook
