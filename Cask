@@ -71,6 +71,8 @@
 ;; editing
 (depends-on "auto-complete")
 (depends-on "expand-region")
+(depends-on "multiple-cursors")
+(depends-on "smartrep")
 
 ;; ruby
 (depends-on "enh-ruby-mode")
