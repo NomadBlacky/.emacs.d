@@ -401,4 +401,7 @@
  ;; If there is more than one, they won't work right.
  '(helm-selection ((t (:background "dark olive green" :distant-foreground "black"))))
  '(magit-section-highlight ((t (:background "dim gray"))))
- '(minibuffer-prompt ((t (:foreground "cyan")))))
+ '(minibuffer-prompt ((t (:foreground "cyan"))))
+ '(smerge-markers ((t (:background "dim gray"))))
+ '(smerge-mine ((t (:background "red4"))))
+ '(smerge-refined-removed ((t (:inherit smerge-refined-change :background "red3")))))
