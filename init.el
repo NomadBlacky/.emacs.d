@@ -362,6 +362,7 @@
 ;; Buffers
 ;;
 (bind-key "<f5>" 'revert-buffer)
+(bind-key "C-x C-k" 'kill-this-buffer)
 
 ;;
 ;; Windows
