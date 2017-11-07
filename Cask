@@ -122,3 +122,6 @@
 
 ;; Kotlin
 (depends-on "kotlin-mode")
+
+;; Analytics
+(depends-on "ess")
