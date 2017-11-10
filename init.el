@@ -35,6 +35,12 @@
          (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
              (normal-top-level-add-subdirs-to-load-path))))))
 
+;; Load local configurations
+(add-to-load-path "./conf.d/")
+(when (file-exists-p "./conf.d/local.el")
+  (load-file "conf.d/local.el"))
+
+
 ;; Open the init.el with 'C-c C-i'
 (defun open-init-el ()
   "Visiting '~/.emacs.d/init.el'."
