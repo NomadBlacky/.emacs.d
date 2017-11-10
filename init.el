@@ -340,13 +340,14 @@
     ("O"        . 'mc/reverse-regions)))
 
 ;; elscreen
-(setq elscreen-prefix-key (kbd "C-z"))
-(elscreen-start)
-(setq elscreen-tab-display-kill-screen nil)
-(setq elscreen-tab-display-control nil)
-(elscreen-create)
-(global-set-key (kbd "<C-tab>") 'elscreen-next)
-(global-set-key (kbd "<C-S-iso-lefttab>") 'elscreen-previous)
+(when (and (boundp 'lv-elscreen-enabled) lv-elscreen-enabled)
+  (setq elscreen-prefix-key (kbd "C-z"))
+  (elscreen-start)
+  (setq elscreen-tab-display-kill-screen nil)
+  (setq elscreen-tab-display-control nil)
+  (elscreen-create)
+  (global-set-key (kbd "<C-tab>") 'elscreen-next)
+  (global-set-key (kbd "<C-S-iso-lefttab>") 'elscreen-previous))
 
 ;; open-junk-file
 (setq open-junk-file-format "~/Dropbox/junk/%Y/%m/%Y-%m-%d-%H%M%S.")
