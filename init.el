@@ -360,7 +360,6 @@
 ;;
 ;; Editing
 ;;
-
 (bind-key "C-h" 'backward-delete-char-untabify)
 (bind-key "M-h" 'backward-kill-word)
 (bind-key "C-c l" 'goto-line)
@@ -368,6 +367,8 @@
 (bind-key "C-c C-c" 'comment-or-uncomment-region)
 (bind-key "C-c r" 'rectangle-mark-mode)
 (bind-key "C-@" 'er/expand-region)
+(bind-key "C-c a" 'align-regexp)
+(bind-key "C-c C-r" 'replace-regexp)
 
 ;;
 ;; Buffers
