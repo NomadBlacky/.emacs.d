@@ -412,7 +412,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(font-lock-type-face ((t (:foreground "dark orange" :weight bold :height 0.9 :family "Verdana"))))
  '(helm-selection ((t (:background "dark olive green" :distant-foreground "black"))))
+ '(magit-branch-remote ((t (:foreground "lime green"))))
+ '(magit-diff-hunk-heading-selection ((t (:inherit magit-diff-hunk-heading-highlight :foreground "chocolate"))))
+ '(magit-section-heading ((t (:foreground "chocolate" :weight bold))))
  '(magit-section-highlight ((t (:background "dim gray"))))
  '(minibuffer-prompt ((t (:foreground "cyan"))))
  '(smerge-markers ((t (:background "dim gray"))))
