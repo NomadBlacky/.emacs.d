@@ -135,7 +135,7 @@
 (require 'linum-off)
 
 ;; hl-line
-(hl-line-mode t)
+(global-hl-line-mode t)
 (set-face-background 'hl-line "#003300")
 
 ;; auto-insert-mode
