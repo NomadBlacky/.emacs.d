@@ -56,6 +56,9 @@
 ;; Share clipboard
 (setq x-select-enable-clipboard t)
 
+;; Don't use tabs
+(setq indent-tabs-mode nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Mode / Package Specific Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
