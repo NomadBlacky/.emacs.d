@@ -174,6 +174,15 @@
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.page\\'" . web-mode))
 
+;; java-mode
+(add-to-list 'auto-mode-alist '("\\.cls\\'" . java-mode)) ;; Apex
+(defun my-java-mode-setup ()
+  (setq c-default-style "linux")
+  (setq c-basic-offset 4)
+  (c-set-offset 'arglist-intro '+)
+  (c-set-offset 'arglist-close 0))
+(add-hook 'java-mode-hook 'my-java-mode-setup)
+
 ;; scala-mode
 (require 'scala-mode)
 (require 'ensime)
