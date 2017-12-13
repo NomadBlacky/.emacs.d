@@ -437,4 +437,5 @@
  '(minibuffer-prompt ((t (:foreground "cyan"))))
  '(smerge-markers ((t (:background "dim gray"))))
  '(smerge-mine ((t (:background "red4"))))
- '(smerge-refined-removed ((t (:inherit smerge-refined-change :background "red3")))))
+ '(smerge-refined-removed ((t (:inherit smerge-refined-change :background "red3"))))
+ '(web-mode-html-tag-bracket-face ((t (:foreground "powder blue")))))
