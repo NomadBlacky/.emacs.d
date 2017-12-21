@@ -141,10 +141,6 @@
 (global-linum-mode t)
 (require 'linum-off)
 
-;; hl-line
-(global-hl-line-mode t)
-(set-face-background 'hl-line "#003300")
-
 ;; auto-insert-mode
 (auto-insert-mode 1)
 (add-to-list 'auto-insert-alist '("\\.rb" . "ruby.rb"))
@@ -426,6 +422,9 @@
       (color-theme-initialize)
       (color-theme-ld-dark)
       (set-frame-parameter nil 'alpha 90)
+      ;; hl-line
+      (global-hl-line-mode t)
+      (set-face-background 'hl-line "#003300")
       (bind-key "C-x C-c" 'kill-this-buffer)
       (bind-key "C-x <f12>" 'save-buffers-kill-terminal)
       (bind-key "C-@" 'er/expand-region)
@@ -433,6 +432,7 @@
       (tool-bar-mode 0)
       (add-to-list 'default-frame-alist '(font . "Migu 1M-10"))
       ))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
