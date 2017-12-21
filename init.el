@@ -388,7 +388,7 @@
 (bind-key "C-c r" 'rectangle-mark-mode)
 (bind-key "M-@" 'er/expand-region)
 (key-chord-define-global "jk" 'er/expand-region)
-(binkd-key "C-c a" 'align-regexp)
+(bind-key "C-c a" 'align-regexp)
 (bind-key "C-c C-r" 'replace-regexp)
 
 ;;
