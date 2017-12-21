@@ -370,6 +370,10 @@
 (setq open-junk-file-format "~/Dropbox/junk/%Y/%m/%Y-%m-%d-%H%M%S.")
 (bind-key "C-c j" 'open-junk-file)
 
+;; key-chord
+(setq key-chord-two-keys-delay 0.05)
+(key-chord-mode t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Bindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

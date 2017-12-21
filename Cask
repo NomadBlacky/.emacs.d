@@ -68,6 +68,7 @@
 (depends-on "undo-tree")
 (depends-on "anzu")
 (depends-on "elscreen")
+(depends-on "key-chord")
 
 ;; editing
 (depends-on "auto-complete")
