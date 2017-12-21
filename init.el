@@ -390,8 +390,9 @@
 (bind-key "RET" 'newline-and-indent)
 (bind-key "C-c C-c" 'comment-or-uncomment-region)
 (bind-key "C-c r" 'rectangle-mark-mode)
-(bind-key "C-@" 'er/expand-region)
-(bind-key "C-c a" 'align-regexp)
+(bind-key "M-@" 'er/expand-region)
+(key-chord-define-global "jk" 'er/expand-region)
+(binkd-key "C-c a" 'align-regexp)
 (bind-key "C-c C-r" 'replace-regexp)
 
 ;;
@@ -427,6 +428,7 @@
       (set-frame-parameter nil 'alpha 90)
       (bind-key "C-x C-c" 'kill-this-buffer)
       (bind-key "C-x <f12>" 'save-buffers-kill-terminal)
+      (bind-key "C-@" 'er/expand-region)
       (unbind-key "C-\\") ; Disable the mozc key binding.
       (tool-bar-mode 0)
       (add-to-list 'default-frame-alist '(font . "Migu 1M-10"))
