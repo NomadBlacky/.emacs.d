@@ -59,6 +59,9 @@
 ;; Don't use tabs
 (setq-default indent-tabs-mode nil)
 
+;; Enable delete-selection-mode
+(delete-selection-mode t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Mode / Package Specific Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
