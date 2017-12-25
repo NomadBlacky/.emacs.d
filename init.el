@@ -396,12 +396,16 @@
 ;;
 (bind-key "<f5>" 'revert-buffer)
 (bind-key "C-x C-k" 'kill-this-buffer)
+(key-chord-define-global "xb" 'helm-buffers-list)
 
 ;;
 ;; Windows
 ;;
 (bind-key "C-o" 'other-window)
 (bind-key "C-c C-f" 'find-file-other-window)
+(key-chord-define-global "12" 'delete-other-windows)
+(key-chord-define-global "23" 'split-window-right)
+(key-chord-define-global "34" 'split-window-below)
 
 ;;
 ;; Modes
@@ -415,6 +419,14 @@
 (bind-key "<f12>" 'suspend-emacs)
 (bind-key "<C-M-return>" 'shell-command)
 (bind-key "M-RET" 'shell-command)
+(bind-key "C-x C-c" 'kill-this-buffer)
+(bind-key "C-x <f12>" 'save-buffers-kill-terminal)
+(key-chord-define-global "dk" 'describe-key)
+(key-chord-define-global "eb" 'eval-buffer)
+(key-chord-define-global "xf" 'helm-find-files)
+(key-chord-define-global "df" 'describe-function)
+(key-chord-define-global "pf" 'helm-projectile-find-file)
+(key-chord-define-global "pg" 'helm-projectile-grep)
 
 ;; for GUI
 (if window-system
@@ -425,8 +437,6 @@
       ;; hl-line
       (global-hl-line-mode t)
       (set-face-background 'hl-line "#003300")
-      (bind-key "C-x C-c" 'kill-this-buffer)
-      (bind-key "C-x <f12>" 'save-buffers-kill-terminal)
       (bind-key "C-@" 'er/expand-region)
       (unbind-key "C-\\") ; Disable the mozc key binding.
       (tool-bar-mode 0)
