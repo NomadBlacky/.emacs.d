@@ -62,6 +62,14 @@
 ;; Enable delete-selection-mode
 (delete-selection-mode t)
 
+
+(defun create-scratch-buffer nil
+   "Create a scratch buffer."
+   (interactive)
+   (switch-to-buffer (get-buffer-create "*scratch*"))
+   (lisp-interaction-mode))
+(key-chord-define-global "sr" 'create-scratch-buffer)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Mode / Package Specific Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
