@@ -86,6 +86,7 @@
 (bind-key "C-x C-f" 'helm-find-files)
 (bind-key "C-x b" 'helm-buffers-list)
 (bind-key "C-x f" 'helm-recentf)
+(bind-key "M-y" 'helm-show-kill-ring)
 
 ;; yas
 (yas-global-mode 1)
