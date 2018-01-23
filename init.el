@@ -386,6 +386,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;
+;; Global
+;;
+(bind-key* "C-o" 'other-window)
+
+;;
 ;; Editing
 ;;
 (bind-key "C-h" 'backward-delete-char-untabify)
