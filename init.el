@@ -40,16 +40,14 @@
 (when (file-exists-p "./conf.d/local.el")
   (load-file "conf.d/local.el"))
 
-
-;; Open the init.el with 'C-c C-i'
 (defun open-init-el ()
   "Visiting '~/.emacs.d/init.el'."
   (interactive)
   (switch-to-buffer (find-file-noselect "~/.emacs.d/init.el")))
 (bind-key "C-c C-i" 'open-init-el)
 
-;; Insert current date and time.
 (defun insert-date-time ()
+  "Insert current date and time."
   (interactive)
   (insert (format-time-string "%Y/%m/%d %H:%M:%S")))
 
