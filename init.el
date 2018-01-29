@@ -418,6 +418,7 @@
 (key-chord-define-global "12" 'delete-other-windows)
 (key-chord-define-global "23" 'split-window-right)
 (key-chord-define-global "34" 'split-window-below)
+(key-chord-define-global "90" 'delete-window)
 
 ;;
 ;; Modes
