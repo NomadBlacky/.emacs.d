@@ -392,7 +392,7 @@
 ;;
 ;; Editing
 ;;
-(bind-key "C-h" 'backward-delete-char-untabify)
+(bind-key* "C-h" 'backward-delete-char-untabify)
 (bind-key "M-h" 'backward-kill-word)
 (bind-key "C-c l" 'goto-line)
 (bind-key "RET" 'newline-and-indent)
