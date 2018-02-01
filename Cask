@@ -101,6 +101,9 @@
 ;; haskell
 (depends-on "haskell-mode")
 
+;; javascript
+(depends-on "js2-mode")
+
 ;; markdown
 (depends-on "markdown-mode")
 (depends-on "markdown-preview-mode")
