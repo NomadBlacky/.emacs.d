@@ -201,6 +201,7 @@
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime)
 (setq ensime-completion-style 'auto-complete)
+(add-to-list 'auto-mode-alist '("\\.sc\\'" . scala-mode)) ;; Scala Script
 
 (defun scala/completing-dot-company ()
   (cond (company-backend
