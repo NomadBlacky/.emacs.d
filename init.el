@@ -447,7 +447,7 @@
 (key-chord-define-global "xf" 'helm-find-files)
 (key-chord-define-global "df" 'describe-function)
 (key-chord-define-global "pf" 'helm-projectile-find-file)
-(key-chord-define-global "pg" 'helm-projectile-grep)
+(key-chord-define-global "pg" 'helm-projectile-ag)
 
 ;; for GUI
 (if window-system
