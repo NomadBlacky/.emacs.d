@@ -57,10 +57,8 @@
 (depends-on "epc")
 (depends-on "google-translate")
 (depends-on "popwin")
-(depends-on "helm")
 (depends-on "edit-server")
 (depends-on "projectile")
-(depends-on "helm-projectile")
 ;;(depends-on "ctags")
 (depends-on "dired-toggle")
 (depends-on "dired-details")
@@ -76,6 +74,11 @@
 (depends-on "expand-region")
 (depends-on "multiple-cursors")
 (depends-on "smartrep")
+
+;; helm
+(depends-on "helm")
+(depends-on "helm-projectile")
+(depends-on "helm-ag")
 
 ;; ruby
 (depends-on "enh-ruby-mode")
