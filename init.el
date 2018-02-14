@@ -390,6 +390,8 @@
 
 ;; golden-ratio
 (golden-ratio-mode 1)
+(setq golden-ratio-exclude-modes '("magit-status-mode"
+                                   "magit-popup-mode"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Bindings
