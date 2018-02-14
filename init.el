@@ -388,6 +388,9 @@
 (setq key-chord-two-keys-delay 0.05)
 (key-chord-mode t)
 
+;; golden-ratio
+(golden-ratio-mode 1)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Bindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

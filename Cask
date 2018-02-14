@@ -68,6 +68,9 @@
 (depends-on "elscreen")
 (depends-on "key-chord")
 
+;; windows
+(depends-on "golden-ratio")
+
 ;; editing
 (depends-on "auto-complete")
 (depends-on "company")
