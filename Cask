@@ -67,6 +67,7 @@
 (depends-on "anzu")
 (depends-on "elscreen")
 (depends-on "key-chord")
+(depends-on "darkroom")
 
 ;; windows
 (depends-on "golden-ratio")
