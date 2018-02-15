@@ -395,6 +395,8 @@
 ;; darkroom
 (require 'darkroom)
 
+;; menu-bar-mode
+(menu-bar-mode -1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Bindings
