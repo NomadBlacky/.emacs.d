@@ -477,6 +477,18 @@
 (key-chord-define-global "pd" 'helm-projectile-find-dir)
 (key-chord-define-global "pg" 'helm-projectile-ag)
 
+;; for Mac
+(when (eq system-type 'darwin)
+  (setq ns-command-modifier (quote meta))
+  (defun copy-from-osx ()
+    (shell-command-to-string "pbpaste"))
+  (defun paste-to-osx (text &optional push)
+    (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+      (process-send-string proc text)
+      (process-send-eof proc)))
+  (setq interprogram-cut-function 'paste-to-osx)
+  (setq interprogram-paste-function 'copy-from-osx))
+
 ;; for GUI
 (if window-system
     (progn
