@@ -448,10 +448,10 @@
 ;;
 (bind-key "C-o" 'other-window)
 (bind-key "C-c C-f" 'find-file-other-window)
-(key-chord-define-global "12" 'delete-other-windows)
-(key-chord-define-global "23" 'split-window-right)
-(key-chord-define-global "34" 'split-window-below)
-(key-chord-define-global "90" 'delete-window)
+(key-chord-define-global "w1" 'delete-other-windows)
+(key-chord-define-global "w2" 'split-window-right)
+(key-chord-define-global "w3" 'split-window-below)
+(key-chord-define-global "w0" 'delete-window)
 
 ;;
 ;; Modes
