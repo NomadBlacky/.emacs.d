@@ -59,9 +59,7 @@
 (depends-on "popwin")
 (depends-on "edit-server")
 (depends-on "projectile")
-;;(depends-on "ctags")
 (depends-on "dired-toggle")
-(depends-on "dired-details")
 (depends-on "linum-off")
 (depends-on "undo-tree")
 (depends-on "anzu")
@@ -89,7 +87,6 @@
 (depends-on "rspec-mode")
 (depends-on "ruby-end")
 (depends-on "robe")
-(depends-on "ruby-block")
 
 ;; python
 (depends-on "virtualenv")

@@ -175,11 +175,6 @@
 (add-hook 'ruby-mode-hook 'robe-mode)
 (add-hook 'robe-mode-hook 'ac-robe-setup)
 
-;; ruby-block
-(require 'ruby-block)
-(ruby-block-mode t)
-(setq ruby-block-highlight-toggle t)
-
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
