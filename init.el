@@ -500,6 +500,7 @@
       (unbind-key "C-\\") ; Disable the mozc key binding.
       (tool-bar-mode 0)
       (add-to-list 'default-frame-alist '(font . "Migu 1M-10"))
+      (exec-path-from-shell-initialize)
       ))
 
 (custom-set-faces
