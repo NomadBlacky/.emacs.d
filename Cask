@@ -67,8 +67,9 @@
 (depends-on "key-chord")
 (depends-on "darkroom")
 
-;; windows
+;; windows & frames
 (depends-on "golden-ratio")
+(depends-on "transpose-frame")
 
 ;; editing
 (depends-on "auto-complete")
