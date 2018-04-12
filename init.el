@@ -486,8 +486,7 @@
 ;; for GUI
 (if window-system
     (progn
-      (color-theme-initialize)
-      (color-theme-ld-dark)
+      (load-theme 'tango-dark)
       (set-frame-parameter nil 'alpha 90)
       ;; hl-line
       (global-hl-line-mode t)
