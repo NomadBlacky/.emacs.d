@@ -505,6 +505,7 @@
  ;; If there is more than one, they won't work right.
  '(font-lock-type-face ((t (:foreground "dark orange" :weight bold :height 0.9 :family "Verdana"))))
  '(helm-selection ((t (:background "dark olive green" :distant-foreground "black"))))
+ '(hl-line ((t (:background "#003300"))))
  '(magit-branch-remote ((t (:foreground "lime green"))))
  '(magit-diff-context-highlight ((t (:background "#555555" :foreground "unspecified"))))
  '(magit-diff-hunk-heading-selection ((t (:inherit magit-diff-hunk-heading-highlight :foreground "chocolate"))))
