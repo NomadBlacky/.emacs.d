@@ -506,6 +506,7 @@
  '(font-lock-type-face ((t (:foreground "dark orange" :weight bold :height 0.9 :family "Verdana"))))
  '(helm-selection ((t (:background "dark olive green" :distant-foreground "black"))))
  '(magit-branch-remote ((t (:foreground "lime green"))))
+ '(magit-diff-context-highlight ((t (:background "#555555" :foreground "unspecified"))))
  '(magit-diff-hunk-heading-selection ((t (:inherit magit-diff-hunk-heading-highlight :foreground "chocolate"))))
  '(magit-section-heading ((t (:foreground "chocolate" :weight bold))))
  '(magit-section-highlight ((t (:background "dim gray"))))
