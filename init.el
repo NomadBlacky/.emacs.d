@@ -409,6 +409,10 @@
 ;; menu-bar-mode
 (menu-bar-mode -1)
 
+;; goto-chg
+(bind-key "M-p" 'goto-last-change)
+(bind-key "M-n" 'goto-last-change-reverse)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Bindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

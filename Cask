@@ -77,6 +77,7 @@
 (depends-on "expand-region")
 (depends-on "multiple-cursors")
 (depends-on "smartrep")
+(depends-on "goto-chg")
 
 ;; helm
 (depends-on "helm")
