@@ -330,6 +330,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(clean-buffer-list-delay-special 86400)
  '(ensime-startup-notification nil)
  '(google-translate-default-source-language "en")
  '(google-translate-default-target-language "ja")
