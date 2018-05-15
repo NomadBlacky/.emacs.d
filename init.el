@@ -507,11 +507,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(font-lock-keyword-face ((t (:foreground "Cyan"))))
  '(font-lock-type-face ((t (:foreground "dark orange" :weight bold :height 0.9 :family "Verdana"))))
  '(helm-selection ((t (:background "dark olive green" :distant-foreground "black"))))
- '(hl-line ((t (:background "#003300"))))
+ '(hl-line ((t (:background "#666600"))))
  '(magit-branch-remote ((t (:foreground "lime green"))))
- '(magit-diff-context-highlight ((t (:background "#555555" :foreground "unspecified"))))
+ '(magit-diff-context ((t (:foreground "#fff"))))
+ '(magit-diff-context-highlight ((t (:background "#555555" :foreground "#ccc"))))
+ '(magit-diff-hunk-heading-highlight ((t (:background "#555533" :foreground "#fff"))))
  '(magit-diff-hunk-heading-selection ((t (:inherit magit-diff-hunk-heading-highlight :foreground "chocolate"))))
  '(magit-section-heading ((t (:foreground "chocolate" :weight bold))))
  '(magit-section-highlight ((t (:background "dim gray"))))
