@@ -9,7 +9,7 @@
 (package-initialize)
 
 ;; Load the packages of downloaded with Cask.
-(require 'cask "~/.cask/cask.el")
+(require 'cask)
 (cask-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
