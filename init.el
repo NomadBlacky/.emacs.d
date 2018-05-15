@@ -498,7 +498,7 @@
       (bind-key "C-@" 'er/expand-region)
       (unbind-key "C-\\") ; Disable the mozc key binding.
       (tool-bar-mode 0)
-      (add-to-list 'default-frame-alist '(font . "Migu 1M-10"))
+      (set-face-attribute 'default nil :family "Migu 1M" :height 120)
       (exec-path-from-shell-initialize)
       ))
 
