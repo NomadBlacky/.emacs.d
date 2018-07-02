@@ -334,7 +334,8 @@
  '(ensime-startup-notification nil)
  '(google-translate-default-source-language "en")
  '(google-translate-default-target-language "ja")
- '(js-indent-level 2))
+ '(js-indent-level 2)
+ '(js-switch-indent-offset 2))
 
 ;; popwin
 (require 'popwin)
