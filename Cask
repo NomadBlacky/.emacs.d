@@ -135,3 +135,6 @@
 
 ;; Analytics
 (depends-on "ess")
+
+;; Docker
+(depends-on "dockerfile-mode")
