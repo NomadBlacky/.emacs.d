@@ -494,7 +494,7 @@
 (if window-system
     (progn
       (load-theme 'tango-dark)
-      (set-frame-parameter nil 'alpha 90)
+      (set-frame-parameter nil 'alpha 97)
       ;; hl-line
       (global-hl-line-mode t)
       (set-face-background 'hl-line "#003300")
