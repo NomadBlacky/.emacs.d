@@ -503,7 +503,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(font-lock-keyword-face ((t (:foreground "Cyan"))))
- '(font-lock-type-face ((t (:foreground "dark orange" :weight bold :height 0.9 :family "Verdana"))))
+ '(font-lock-type-face ((t (:foreground "dark orange" :weight bold :height 0.9))))
  '(helm-selection ((t (:background "dark olive green" :distant-foreground "black"))))
  '(hl-line ((t (:background "#666600"))))
  '(magit-branch-remote ((t (:foreground "lime green"))))
@@ -515,6 +515,6 @@
  '(magit-section-highlight ((t (:background "dim gray"))))
  '(minibuffer-prompt ((t (:foreground "cyan"))))
  '(smerge-markers ((t (:background "dim gray"))))
- '(smerge-mine ((t (:background "red4"))))
  '(smerge-refined-removed ((t (:inherit smerge-refined-change :background "red3"))))
+ '(smerge-upper ((t (:background "red4"))))
  '(web-mode-html-tag-bracket-face ((t (:foreground "powder blue")))))
