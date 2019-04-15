@@ -52,3 +52,6 @@ projectile.cache
 # other configurations
 /conf.d/*
 !/conf.d/.gitkeep
+
+# El-get
+el-get

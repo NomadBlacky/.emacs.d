@@ -8,9 +8,49 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;; Load the packages of downloaded with Cask.
-(require 'cask)
-(cask-initialize)
+;; El-get
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil t)
+  (url-retrieve
+   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
+   (lambda (s)
+     (end-of-buffer)
+     (eval-print-last-sexp))))
+
+(el-get-bundle use-package)
+(el-get-bundle key-chord)
+(el-get-bundle expand-region)
+(el-get-bundle multiple-cursors)
+(el-get-bundle popwin)
+(el-get-bundle projectile)
+(el-get-bundle emmet-mode)
+(el-get-bundle recentf-ext)
+(el-get-bundle magit)
+(el-get-bundle open-junk-file)
+(el-get-bundle google-translate)
+(el-get-bundle anzu)
+(el-get-bundle elscreen)
+(el-get-bundle darkroom)
+(el-get-bundle company)
+(el-get-bundle helm)
+(el-get-bundle helm-projectile)
+(el-get-bundle helm-ag)
+(el-get-bundle scala-mode)
+(el-get-bundle markdown-mode)
+(el-get-bundle markdown-preview-mode)
+(el-get-bundle yaml-mode)
+(el-get-bundle fish-mode)
+(el-get-bundle kotlin-mode)
+(el-get-bundle dockerfile-mode)
+(el-get-bundle web-mode)
+(el-get-bundle js2-mode)
+(el-get-bundle smartrep)
+(el-get-bundle linum-off)
+
+;; TODO: Replace package specify settings with use-package.el
+(use-package helm
+  :bind (("C-x C-f" . helm-find-files)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General
@@ -353,7 +393,6 @@
       (unbind-key "C-\\") ; Disable the mozc key binding.
       (tool-bar-mode 0)
       (set-face-attribute 'default nil :family "Migu 1M" :height 140)
-      (exec-path-from-shell-initialize)
       ))
 
 (custom-set-faces
