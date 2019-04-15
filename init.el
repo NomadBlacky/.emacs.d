@@ -47,6 +47,10 @@
 (el-get-bundle js2-mode)
 (el-get-bundle smartrep)
 (el-get-bundle linum-off)
+(el-get-bundle tarao/el-get-lock)
+
+;; Lock package versions.
+(el-get-lock)
 
 ;; TODO: Replace package specify settings with use-package.el
 (use-package helm
