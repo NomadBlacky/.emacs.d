@@ -26,32 +26,14 @@
 ;; Disable the startup message.
 (setq inhibit-startup-message t)
 
-;; Define a function that add the directories to load-path.
-(defun add-to-load-path (&rest paths)
-  (let (path)
-    (dolist (path paths paths)
-     (let ((default-directory (expand-file-name (concat user-emacs-directory path))))
-        (add-to-list 'load-path default-directory)
-         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-             (normal-top-level-add-subdirs-to-load-path))))))
-
-;; Load local configurations
-(add-to-load-path "./conf.d/")
-(when (file-exists-p "./conf.d/local.el")
-  (load-file "conf.d/local.el"))
-
+;; Open this file.
 (defun open-init-el ()
   "Visiting '~/.emacs.d/init.el'."
   (interactive)
   (switch-to-buffer (find-file-noselect "~/.emacs.d/init.el")))
 (bind-key "C-c C-i" 'open-init-el)
 
-(defun insert-date-time ()
-  "Insert current date and time."
-  (interactive)
-  (insert (format-time-string "%Y/%m/%d %H:%M:%S")))
-
-;; Share clipboard
+;; Share OS clipboard
 (setq x-select-enable-clipboard t)
 
 ;; Don't use tabs
@@ -60,13 +42,13 @@
 ;; Enable delete-selection-mode
 (delete-selection-mode t)
 
-
+;; Quick Note
 (defun create-scratch-buffer nil
    "Create a scratch buffer."
    (interactive)
-   (switch-to-buffer (get-buffer-create "*scratch*"))
-   (lisp-interaction-mode))
-(key-chord-define-global "sr" 'create-scratch-buffer)
+   (switch-to-buffer (get-buffer-create "*Quick Note*"))
+   (markdown-mode))
+(key-chord-define-global "qn" 'create-scratch-buffer)
 
 ;; Sync X clipboard
 (when (eq system-type 'gnu/linux)
@@ -86,12 +68,10 @@
 
 ;; recentf-ext
 (require 'recentf-ext)
-(setq recentf-max-saved-items 100)
+(setq recentf-max-saved-items 500)
 
 ;; dired
 (setq dired-dwim-target t)
-(setq dired-toggle-window-size 30)
-(bind-key "C-c C-p" 'dired-toggle)
 
 ;; helm
 (bind-key "M-x" 'helm-M-x)
@@ -99,16 +79,6 @@
 (bind-key "C-x b" 'helm-buffers-list)
 (bind-key "C-x f" 'helm-recentf)
 (bind-key "M-y" 'helm-show-kill-ring)
-
-;; yas
-(yas-global-mode 1)
-
-;; auto-complete
-;;(ac-config-default)
-;;(bind-key "C-j" 'auto-complete)
-;;(bind-key "C-n" 'ac-next ac-complete-mode-map)
-;;(bind-key "C-p" 'ac-previous ac-complete-mode-map)
-;;(bind-key "C-f" 'ac-complete ac-complete-mode-map)
 
 ;; company
 (require 'company)
@@ -160,24 +130,11 @@
 (global-linum-mode t)
 (require 'linum-off)
 
-;; auto-insert-mode
-(auto-insert-mode 1)
-(add-to-list 'auto-insert-alist '("\\.rb" . "ruby.rb"))
-(add-to-list 'auto-insert-alist '("Gemfile" . "Gemfile"))
-(setq auto-insert-directory "~/.emacs.d/auto-insert-templates/")
-
 ;; electric-pair-mode
 (electric-pair-mode t)
 
 ;; global-auto-revert-mode
 (global-auto-revert-mode t)
-
-;; robe
-(add-hook 'ruby-mode-hook 'robe-mode)
-(add-hook 'robe-mode-hook 'ac-robe-setup)
-
-;; flycheck
-(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; web-mode
 (defun web-mode-hook ()
@@ -211,39 +168,7 @@
 
 ;; scala-mode
 (require 'scala-mode)
-(require 'ensime)
-(add-hook 'scala-mode-hook 'ensime)
-(setq ensime-completion-style 'auto-complete)
-(add-to-list 'auto-mode-alist '("\\.sc\\'" . scala-mode)) ;; Scala Script
-
-(defun scala/completing-dot-company ()
-  (cond (company-backend
-	 (company-complete-selection)
-	 (scala/completing-dot))
-	(t
-	 (insert ".")
-	 (company-complete))))
-
-(defun scala/completing-dot-ac ()
-  (insert ".")
-  (ac-trigger-key-command t))
-
-;; Interactive commands
-
-(defun scala/completing-dot ()
-  "Insert a period and show company completions."
-  (interactive "*")
-  (eval-and-compile (require 'ensime))
-  (eval-and-compile (require 's))
-  (when (s-matches? (rx (+ (not space)))
-		    (buffer-substring (line-beginning-position) (point)))
-    (delete-horizontal-space t))
-  (cond ((not (and (ensime-connected-p) ensime-completion-style))
-	 (insert "."))
-	((eq ensime-completion-style 'company)
-	 (scala/completing-dot-company))
-	((eq ensime-completion-style 'auto-complete)
-	 (scala/completing-dot-ac))))
+(add-to-list 'auto-mode-alist '("\\.sc\\'" . scala-mode)) ;; for Scala Scripts
 
 ;; magit
 (require 'magit)
@@ -278,48 +203,6 @@
 (set-face-background 'magit-diff-removed "unspecified")
 (set-face-background 'magit-diff-removed-highlight "#333333")
 
-
-;; mozc
-(require 'mozc)
-(set-language-environment "Japanese")
-(setq default-input-method "japanese-mozc")
-(prefer-coding-system 'utf-8)
-(global-set-key [zenkaku-hankaku] #'toggle-input-method)
-
-;; twitter
-(add-hook 'twittering-mode-hook
-	  (lambda ()
-	    (mapc (lambda (pair)
-		    (let ((key (car pair))
-			  (func (cdr pair)))
-		      (define-key twittering-mode-map
-			(read-kbd-macro key) func)))
-		  '(("H" . twittering-home-timeline)
-		    ("F" . twittering-friends-timeline)
-		    ("R" . twittering-replies-timeline)
-		    ("U" . twittering-user-timeline)
-		    ("W" . twittering-update-status-interactive)))))
-(setq twittering-use-master-password t)
-(setq twittering-timer-interval 300)
-(setq twittering-username "blac_k_ey")
-(add-hook 'twittering-new-tweets-hook 'twittering-mention-notification-func)
-(defun twittering-mention-notification-func ()
-  "Send notification with 'notify-send'."
-  (when (and twittering-username
-	     (boundp 'twittering-new-tweets-statuses))
-    (dolist (tweet twittering-new-tweets-statuses)
-      (when (string-match-p
-	     (format "@%s" twittering-username)
-	     (alist-get 'text tweet))
-	(start-process "twittering-notify" nil "notify-send"
-		       "New Mention"
-		       (alist-get 'text tweet))))))
-(key-chord-define-global "^\\" 'twittering-update-status-interactive)
-
-;; python
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
-
 ;; markdown-preview-mode
 (setq markdown-command "marked")
 
@@ -343,25 +226,12 @@
 (setq popwin:popup-window-position 'bottom)
 (push '("Google Translate") popwin:special-display-config)
 
-;; edit-server
-(edit-server-start)
-(setq edit-server-new-frame nil)
-
 ;; projectile
 (projectile-global-mode)
 (helm-projectile-on)
 
-;; ctags
-;;(require 'ctags)
-;;(setq tags-revert-without-query t)
-;;(bind-key "<f7>" 'ctags-create-or-update-tags-table)
-;;(bind-key "M-." 'ctags-search)
-
 ;; anzu
 (global-anzu-mode +1)
-
-;; desktop
-;;(desktop-save-mode t)
 
 ;; multiple-cursors & smartrep
 (require 'multiple-cursors)
@@ -403,18 +273,11 @@
 (setq key-chord-two-keys-delay 0.05)
 (key-chord-mode t)
 
-;; golden-ratio
-(setq golden-ratio-exclude-modes '("magit-status-mode"
-                                   "magit-popup-mode"))
 ;; darkroom
 (require 'darkroom)
 
 ;; menu-bar-mode
 (menu-bar-mode -1)
-
-;; goto-chg
-(bind-key "M-p" 'goto-last-change)
-(bind-key "M-n" 'goto-last-change-reverse)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Key Bindings
@@ -434,8 +297,7 @@
 (bind-key "RET" 'newline-and-indent)
 (bind-key "C-c C-c" 'comment-or-uncomment-region)
 (bind-key "C-c r" 'rectangle-mark-mode)
-(bind-key "M-@" 'er/expand-region)
-(key-chord-define-global "jk" 'er/expand-region)
+(bind-key "C-:" 'er/expand-region)
 (bind-key "C-c a" 'align-regexp)
 (bind-key "C-c C-r" 'replace-regexp)
 
@@ -450,7 +312,6 @@
 ;; Windows
 ;;
 (bind-key "C-o" 'other-window)
-(bind-key "C-c C-f" 'find-file-other-window)
 (key-chord-define-global "w1" 'delete-other-windows)
 (key-chord-define-global "w2" 'split-window-right)
 (key-chord-define-global "w3" 'split-window-below)
@@ -460,7 +321,6 @@
 ;; Modes
 ;;
 (bind-key "<f9>" 'linum-mode)
-(bind-key "C-c t" 'multi-term)
 
 ;;
 ;; Others
@@ -472,7 +332,6 @@
 (bind-key "C-x <f12>" 'save-buffers-kill-terminal)
 (key-chord-define-global "dk" 'describe-key)
 (key-chord-define-global "eb" 'eval-buffer)
-(key-chord-define-global "xf" 'helm-find-files)
 (key-chord-define-global "df" 'describe-function)
 (key-chord-define-global "pf" 'helm-projectile-find-file)
 (key-chord-define-global "pd" 'helm-projectile-find-dir)
