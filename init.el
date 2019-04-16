@@ -56,6 +56,13 @@
 (use-package helm
   :bind (("C-x C-f" . helm-find-files)))
 
+(use-package open-junk-file
+  :config
+  (setq open-junk-file-format "~/projects/notebook/%Y/%m/%Y-%m-%d-%H%M%S.md")
+  :bind
+  ("C-c j" . 'open-junk-file)
+  )
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -308,10 +315,6 @@
   (elscreen-create))
 (global-set-key (kbd "<C-tab>") 'elscreen-next)
 (global-set-key (kbd "<C-S-iso-lefttab>") 'elscreen-previous)
-
-;; open-junk-file
-(setq open-junk-file-format "~/Dropbox/junk/%Y/%m/%Y-%m-%d-%H%M%S.")
-(bind-key "C-c j" 'open-junk-file)
 
 ;; key-chord
 (setq key-chord-two-keys-delay 0.05)
