@@ -58,9 +58,20 @@
 
 (use-package open-junk-file
   :config
-  (setq open-junk-file-format "~/projects/notebook/%Y/%m/%Y-%m-%d-%H%M%S.md")
+  (setq open-junk-file-format "~/Dropbox/Documents/notebook/memo/%Y/%m/%Y-%m-%d-%H%M%S.md")
   :bind
   ("C-c j" . 'open-junk-file)
+  )
+
+(use-package markdown-preview-mode
+  :bind
+  (setq markdown-preview-stylesheets
+        (list
+         "http://thomasf.github.io/solarized-css/solarized-dark.min.css"
+         "~/.emacs.d/markdown-preview.css"
+         ))
+  (:map markdown-mode-map
+        ("C-c C-p" . markdown-preview-mode))
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
