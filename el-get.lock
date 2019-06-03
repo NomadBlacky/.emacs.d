@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((magit :checksum "5a9e114bfc654186b89867ffdd95a3088cdd6446")
+      '((twittering-mode :checksum "114891e8fdb4f06b1326a6cf795e49c205cf9e29")
+        (magit :checksum "5a9e114bfc654186b89867ffdd95a3088cdd6446")
         (web-server :checksum "cafa5b7582c57252a0884b2c33da9b18fb678713")
         (web-mode :checksum "913d048a5958b588c17b040b88b643c628116275")
         (use-package :checksum "0ee88b5cac41acf974c4bedb8859931ead8bfc79")

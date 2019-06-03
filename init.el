@@ -48,6 +48,7 @@
 (el-get-bundle smartrep)
 (el-get-bundle linum-off)
 (el-get-bundle tarao/el-get-lock)
+(el-get-bundle twittering-mode)
 
 ;; Lock package versions.
 (el-get-lock)
@@ -73,6 +74,10 @@
   (:map markdown-mode-map
         ("C-c C-p" . markdown-preview-mode))
   )
+
+(use-package twittering-mode
+  :bind (("C-c C-t" . 'twittering-update-status-interactive)))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General
