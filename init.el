@@ -50,6 +50,7 @@
 (el-get-bundle tarao/el-get-lock)
 (el-get-bundle twittering-mode)
 (el-get-bundle tide)
+(el-get-bundle swap-buffers)
 
 ;; Lock package versions.
 (el-get-lock)
@@ -99,6 +100,9 @@
   (add-hook 'before-save-hook 'tide-format-before-save)
   (add-hook 'typescript-mode-hook #'setup-tide-mode)
   )
+
+(use-package swap-buffers
+  :bind ("C-c o" . swap-buffers))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General
