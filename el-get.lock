@@ -1,5 +1,8 @@
 (setq el-get-lock-package-versions
-      '((twittering-mode :checksum "114891e8fdb4f06b1326a6cf795e49c205cf9e29")
+      '((tide :checksum "13f64933c19590ebd02a4b141bb6be88d7aaf2b0")
+        (flycheck :checksum "ea176a4f6bfebd70b71a8a5e2988b49e1a58fe52")
+        (typescript-mode :checksum "32146510b8ebb031e468c6c0898a9b253c73617e")
+        (twittering-mode :checksum "114891e8fdb4f06b1326a6cf795e49c205cf9e29")
         (magit :checksum "5a9e114bfc654186b89867ffdd95a3088cdd6446")
         (web-server :checksum "cafa5b7582c57252a0884b2c33da9b18fb678713")
         (web-mode :checksum "913d048a5958b588c17b040b88b643c628116275")

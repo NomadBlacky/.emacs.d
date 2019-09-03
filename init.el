@@ -49,6 +49,7 @@
 (el-get-bundle linum-off)
 (el-get-bundle tarao/el-get-lock)
 (el-get-bundle twittering-mode)
+(el-get-bundle tide)
 
 ;; Lock package versions.
 (el-get-lock)
@@ -78,6 +79,26 @@
 (use-package twittering-mode
   :bind (("C-c C-t" . 'twittering-update-status-interactive)))
 
+(use-package tide
+  :config
+  (defun setup-tide-mode ()
+    (interactive)
+    (tide-setup)
+    (flycheck-mode +1)
+    (setq flycheck-check-syntax-automatically '(save mode-enabled))
+    (eldoc-mode +1)
+    (tide-hl-identifier-mode +1)
+    ;; company is an optional dependency. You have to
+    ;; install it separately via package-install
+    ;; `M-x package-install [ret] company`
+    (company-mode +1))
+  ;; aligns annotation to the right hand side
+  (setq company-tooltip-align-annotations t)
+  :init
+  ;; formats the buffer before saving
+  (add-hook 'before-save-hook 'tide-format-before-save)
+  (add-hook 'typescript-mode-hook #'setup-tide-mode)
+  )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; General
