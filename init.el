@@ -55,6 +55,10 @@
 ;; Lock package versions.
 (el-get-lock)
 
+;; Local packages
+(add-to-list 'load-path "~/.emacs.d/local/")
+(require 'digdag-mode)
+
 ;; TODO: Replace package specify settings with use-package.el
 (use-package helm
   :bind (("C-x C-f" . helm-find-files)))
