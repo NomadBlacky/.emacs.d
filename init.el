@@ -99,10 +99,12 @@
     (company-mode +1))
   ;; aligns annotation to the right hand side
   (setq company-tooltip-align-annotations t)
-  :init
-  ;; formats the buffer before saving
-  (add-hook 'before-save-hook 'tide-format-before-save)
-  (add-hook 'typescript-mode-hook #'setup-tide-mode)
+  :ensure t
+  :after (typescript-mode company flycheck)
+  :hook ((typescript-mode . tide-setup)
+         (typescript-mode . tide-hl-identifier-mode)
+         (before-save . tide-format-before-save))
+  :bind (("C-S-g" . tide-jump-to-definition))
   )
 
 (use-package swap-buffers
