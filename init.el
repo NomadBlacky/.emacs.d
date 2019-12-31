@@ -306,17 +306,6 @@
 
 ;; google-translate
 (bind-key "C-c C-g" 'google-translate-at-point)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(clean-buffer-list-delay-special 86400)
- '(ensime-startup-notification nil)
- '(google-translate-default-source-language "en")
- '(google-translate-default-target-language "ja")
- '(js-indent-level 2)
- '(js-switch-indent-offset 2))
 
 ;; popwin
 (require 'popwin)
@@ -470,3 +459,16 @@
  '(smerge-refined-removed ((t (:inherit smerge-refined-change :background "red3"))))
  '(smerge-upper ((t (:background "red4"))))
  '(web-mode-html-tag-bracket-face ((t (:foreground "powder blue")))))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(clean-buffer-list-delay-special 86400)
+ '(ensime-startup-notification nil)
+ '(google-translate-default-source-language "en")
+ '(google-translate-default-target-language "ja")
+ '(js-indent-level 2)
+ '(js-switch-indent-offset 2)
+ '(package-selected-packages (quote (tide swap-buffers fish-mode darkroom company))))
