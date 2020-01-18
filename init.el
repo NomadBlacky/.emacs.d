@@ -71,12 +71,13 @@
   )
 
 (use-package markdown-preview-mode
-  :bind
+  :config
   (setq markdown-preview-stylesheets
         (list
          "http://thomasf.github.io/solarized-css/solarized-dark.min.css"
          "~/.emacs.d/markdown-preview.css"
          ))
+  :bind
   (:map markdown-mode-map
         ("C-c C-p" . markdown-preview-mode))
   )
