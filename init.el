@@ -65,7 +65,7 @@
 
 (use-package open-junk-file
   :config
-  (setq open-junk-file-format "~/Dropbox/Documents/notebook/memo/%Y/%m/%Y-%m-%d-%H%M%S.md")
+  (setq open-junk-file-format "~/Dropbox/Documents/notebook/memo/%Y-%m-%d-%H%M%S.md")
   :bind
   ("C-c j" . 'open-junk-file)
   )
